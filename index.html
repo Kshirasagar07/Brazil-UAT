@@ -1,50 +1,83 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Colazo Brazil — UAT</title>
+<title>Colazo Brasil — UAT</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 
 <style>
 
+/* =========================
+   GLOBAL
+========================= */
+
 :root{
+
     --accent:#08a878;
+
     --accent2:#00c2ff;
+
     --ink:#12141a;
+
     --muted:#687080;
+
     --bg:#f6f8fb;
+
     --card:#fff;
+
     --line:#e7eaf0;
+
 }
 
 *{
+
     box-sizing:border-box;
+
     margin:0;
+
     padding:0;
+
 }
 
 html{
+
     scroll-behavior:smooth;
+
 }
 
 body{
+
     font-family:Inter,sans-serif;
+
     background:var(--bg);
+
     color:var(--ink);
+
     line-height:1.6;
+
 }
 
-/* HEADER */
+
+/* =========================
+   HEADER
+========================= */
 
 header{
+
     position:fixed;
+
     z-index:20;
 
     top:0;
+
     left:0;
 
     width:100%;
@@ -62,9 +95,11 @@ header{
     backdrop-filter:blur(16px);
 
     border-bottom:1px solid rgba(255,255,255,.5);
+
 }
 
 .brand{
+
     display:flex;
 
     align-items:center;
@@ -78,9 +113,11 @@ header{
     font-weight:800;
 
     font-size:1.35rem;
+
 }
 
 .logo{
+
     width:42px;
 
     height:42px;
@@ -106,9 +143,11 @@ header{
 
     box-shadow:
         0 8px 22px rgba(8,168,120,.28);
+
 }
 
 .env{
+
     font-size:.68rem;
 
     letter-spacing:.12em;
@@ -124,9 +163,11 @@ header{
     color:#fff;
 
     margin-left:5px;
+
 }
 
 nav a{
+
     color:#4c5361;
 
     text-decoration:none;
@@ -136,15 +177,22 @@ nav a{
     font-size:.92rem;
 
     font-weight:600;
+
 }
 
 nav a:hover{
+
     color:var(--accent);
+
 }
 
-/* HERO */
+
+/* =========================
+   HERO
+========================= */
 
 .hero{
+
     min-height:780px;
 
     padding:150px 6% 90px;
@@ -160,16 +208,23 @@ nav a:hover{
     overflow:hidden;
 
     background:
+
         linear-gradient(
             90deg,
             rgba(7,10,17,.86),
             rgba(7,10,17,.35)
         ),
-        url('https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=1800')
+
+        url(
+            'https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=1800'
+        )
+
         center/cover;
+
 }
 
 .hero:after{
+
     content:"";
 
     position:absolute;
@@ -181,17 +236,21 @@ nav a:hover{
     background:var(--bg);
 
     border-radius:50% 50% 0 0;
+
 }
 
 .hero-content{
+
     max-width:780px;
 
     position:relative;
 
     z-index:2;
+
 }
 
 .eyebrow{
+
     display:inline-flex;
 
     gap:8px;
@@ -211,9 +270,11 @@ nav a:hover{
     letter-spacing:.14em;
 
     font-size:.7rem;
+
 }
 
 h1{
+
     font-family:Poppins;
 
     font-size:clamp(
@@ -227,17 +288,21 @@ h1{
     margin:24px 0 22px;
 
     letter-spacing:-.05em;
+
 }
 
 .hero p{
+
     font-size:1.12rem;
 
     max-width:650px;
 
     color:#e9ecf2;
+
 }
 
 .actions{
+
     display:flex;
 
     gap:14px;
@@ -245,9 +310,11 @@ h1{
     margin-top:34px;
 
     flex-wrap:wrap;
+
 }
 
 .btn{
+
     display:inline-block;
 
     padding:13px 22px;
@@ -257,33 +324,47 @@ h1{
     text-decoration:none;
 
     font-weight:700;
+
 }
 
 .primary{
+
     background:#fff;
 
     color:#111;
+
 }
 
 .secondary{
+
     border:1px solid rgba(255,255,255,.35);
 
     color:#fff;
 
     background:rgba(255,255,255,.08);
+
 }
 
-/* COMMON */
+
+/* =========================
+   COMMON
+========================= */
 
 .wrap{
+
     width:min(1180px,88%);
 
     margin:auto;
+
 }
 
-/* STATS */
+
+/* =========================
+   ESTATÍSTICAS
+========================= */
 
 .stats{
+
     margin-top:-35px;
 
     position:relative;
@@ -305,21 +386,27 @@ h1{
         0 20px 55px rgba(15,20,30,.09);
 
     overflow:hidden;
+
 }
 
 .stat{
+
     padding:27px;
 
     border-right:1px solid var(--line);
 
     text-align:center;
+
 }
 
 .stat:last-child{
+
     border-right:0;
+
 }
 
 .stat strong{
+
     display:block;
 
     font-family:Poppins;
@@ -327,21 +414,30 @@ h1{
     font-size:2rem;
 
     color:var(--accent);
+
 }
 
 .stat span{
+
     font-size:.82rem;
 
     color:var(--muted);
+
 }
 
-/* SECTIONS */
+
+/* =========================
+   SEÇÕES
+========================= */
 
 section{
+
     padding:100px 0;
+
 }
 
 .section-head{
+
     display:flex;
 
     justify-content:space-between;
@@ -351,34 +447,45 @@ section{
     align-items:end;
 
     margin-bottom:35px;
+
 }
 
 .section-head h2{
+
     font-family:Poppins;
 
     font-size:2.6rem;
 
     line-height:1.1;
+
 }
 
 .section-head p{
+
     max-width:520px;
 
     color:var(--muted);
+
 }
 
-/* PRODUCTS */
+
+/* =========================
+   PRODUTOS
+========================= */
 
 .products{
+
     display:grid;
 
     grid-template-columns:
         repeat(3,1fr);
 
     gap:24px;
+
 }
 
 .product-card{
+
     background:var(--card);
 
     border:1px solid var(--line);
@@ -391,28 +498,36 @@ section{
         0 12px 35px rgba(15,20,30,.06);
 
     transition:.3s;
+
 }
 
 .product-card:hover{
+
     transform:translateY(-8px);
 
     box-shadow:
         0 22px 45px rgba(15,20,30,.12);
+
 }
 
 .product-image{
+
     height:245px;
 
     background-size:cover;
 
     background-position:center;
+
 }
 
 .product-body{
+
     padding:23px;
+
 }
 
 .pill{
+
     display:inline-block;
 
     font-size:.68rem;
@@ -430,25 +545,31 @@ section{
     padding:6px 9px;
 
     border-radius:20px;
+
 }
 
 .product-body h3{
+
     font-family:Poppins;
 
     font-size:1.45rem;
 
     margin:13px 0 6px;
+
 }
 
 .product-body p{
+
     color:var(--muted);
 
     font-size:.92rem;
 
     margin-bottom:18px;
+
 }
 
 .outline-btn{
+
     background:white;
 
     border:1px solid #dfe3ea;
@@ -460,26 +581,35 @@ section{
     font-weight:700;
 
     cursor:pointer;
+
 }
 
 .outline-btn:hover{
+
     border-color:var(--accent);
 
     color:var(--accent);
+
 }
 
-/* FEATURES */
+
+/* =========================
+   EXPERIÊNCIA
+========================= */
 
 .feature-grid{
+
     display:grid;
 
     grid-template-columns:
         repeat(2,1fr);
 
     gap:18px;
+
 }
 
 .feature{
+
     display:flex;
 
     gap:17px;
@@ -491,9 +621,11 @@ section{
     padding:24px;
 
     border-radius:20px;
+
 }
 
 .feature-icon{
+
     min-width:48px;
 
     height:48px;
@@ -514,23 +646,32 @@ section{
     place-items:center;
 
     font-size:1.25rem;
+
 }
 
 .feature h3{
+
     margin-bottom:4px;
 
     font-family:Poppins;
+
 }
 
 .feature p{
+
     color:var(--muted);
 
     font-size:.9rem;
+
 }
 
-/* CAMPAIGN */
+
+/* =========================
+   CAMPANHA
+========================= */
 
 .banner{
+
     border-radius:30px;
 
     padding:60px;
@@ -547,9 +688,11 @@ section{
     position:relative;
 
     overflow:hidden;
+
 }
 
 .banner:after{
+
     content:"BR-UAT";
 
     position:absolute;
@@ -563,9 +706,11 @@ section{
     font-weight:800;
 
     opacity:.09;
+
 }
 
 .banner h2{
+
     font-family:Poppins;
 
     font-size:2.8rem;
@@ -573,19 +718,26 @@ section{
     max-width:650px;
 
     line-height:1.1;
+
 }
 
 .banner p{
+
     max-width:600px;
 
     margin:15px 0 25px;
 
     color:rgba(255,255,255,.88);
+
 }
 
-/* FOOTER */
+
+/* =========================
+   RODAPÉ
+========================= */
 
 footer{
+
     background:#101217;
 
     color:#c7cbd4;
@@ -601,61 +753,88 @@ footer{
     flex-wrap:wrap;
 
     font-size:.85rem;
+
 }
 
 footer strong{
+
     color:white;
+
 }
 
-/* MOBILE */
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:850px){
 
     nav{
+
         display:none;
+
     }
 
     .stats{
+
         grid-template-columns:
             repeat(2,1fr);
+
     }
 
     .stat:nth-child(2){
+
         border-right:0;
+
     }
 
     .products{
+
         grid-template-columns:1fr;
+
     }
 
     .feature-grid{
+
         grid-template-columns:1fr;
+
     }
 
     .section-head{
+
         display:block;
+
     }
 
     .section-head p{
+
         margin-top:12px;
+
     }
 
     .hero{
+
         min-height:700px;
+
     }
 
 }
 
 </style>
+
 </head>
+
 
 <body>
 
-<!-- HEADER -->
+
+<!-- =========================
+     CABEÇALHO
+========================= -->
 
 <header>
 
-    <a class="brand" href="#home">
+    <a class="brand" href="#inicio">
 
         <span class="logo">
             C
@@ -669,18 +848,19 @@ footer strong{
 
     </a>
 
+
     <nav>
 
-        <a href="#products">
-            Products
+        <a href="#produtos">
+            Produtos
         </a>
 
-        <a href="#experience">
-            Experience
+        <a href="#experiencia">
+            Experiência
         </a>
 
-        <a href="#campaign">
-            Campaign
+        <a href="#campanha">
+            Campanha
         </a>
 
     </nav>
@@ -688,36 +868,59 @@ footer strong{
 </header>
 
 
-<main id="home">
+
+<main id="inicio">
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
 <section class="hero">
 
     <div class="hero-content">
 
         <span class="eyebrow">
-            Colazo • Brazil • User Acceptance Testing
+
+            Colazo • Brasil • Teste de Aceitação do Usuário
+
         </span>
 
+
         <h1>
-            Bring the energy. Taste the moment.
+
+            Traga a energia.
+            Sinta o momento.
+
         </h1>
 
+
         <p>
-            A colorful, high-energy Colazo experience inspired by
-            Brazil's beaches, music, movement and celebration.
+
+            Uma experiência Colazo vibrante e cheia de energia,
+            inspirada nas praias, na música, no movimento e na
+            alegria do Brasil.
+
         </p>
+
 
         <div class="actions">
 
-            <a class="btn primary" href="#products">
-                Explore products
+            <a
+                class="btn primary"
+                href="#produtos">
+
+                Explorar produtos
+
             </a>
 
-            <a class="btn secondary" href="#campaign">
-                View campaign
+
+            <a
+                class="btn secondary"
+                href="#campanha">
+
+                Ver campanha
+
             </a>
 
         </div>
@@ -727,63 +930,111 @@ footer strong{
 </section>
 
 
-<!-- STATS -->
+
+<!-- =========================
+     ESTATÍSTICAS
+========================= -->
 
 <div class="wrap">
 
     <div class="stats">
 
-        <div class="stat">
-            <strong>15+</strong>
-            <span>flavor moments</span>
-        </div>
 
         <div class="stat">
-            <strong>5</strong>
-            <span>campaign zones</span>
+
+            <strong>
+                15+
+            </strong>
+
+            <span>
+                sabores e experiências
+            </span>
+
         </div>
 
-        <div class="stat">
-            <strong>3</strong>
-            <span>service channels</span>
-        </div>
 
         <div class="stat">
-            <strong>24/7</strong>
-            <span>digital experience</span>
+
+            <strong>
+                5
+            </strong>
+
+            <span>
+                áreas de campanha
+            </span>
+
         </div>
+
+
+        <div class="stat">
+
+            <strong>
+                3
+            </strong>
+
+            <span>
+                canais de atendimento
+            </span>
+
+        </div>
+
+
+        <div class="stat">
+
+            <strong>
+                24/7
+            </strong>
+
+            <span>
+                experiência digital
+            </span>
+
+        </div>
+
 
     </div>
 
 </div>
 
 
-<!-- PRODUCTS -->
 
-<section id="products">
+<!-- =========================
+     PRODUTOS
+========================= -->
+
+<section id="produtos">
 
 <div class="wrap">
+
 
     <div class="section-head">
 
         <h2>
-            Made for Brazil
+
+            Feito para o Brasil
+
         </h2>
 
+
         <p>
-            Explore a localized Colazo experience with products,
-            stories and digital touchpoints tailored for this UAT market.
+
+            Descubra uma experiência Colazo localizada,
+            com produtos, histórias e experiências digitais
+            pensadas especialmente para o mercado brasileiro.
+
         </p>
 
     </div>
 
 
+
     <div class="products">
 
 
-        <!-- PRODUCT 1 -->
+        <!-- PRODUTO 1 -->
 
         <article class="product-card">
+
 
             <div
                 class="product-image"
@@ -791,35 +1042,53 @@ footer strong{
                 background-image:url(
                 'https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?w=900'
                 )">
+
             </div>
+
 
             <div class="product-body">
 
+
                 <span class="pill">
-                    Signature
+
+                    Destaque
+
                 </span>
 
+
                 <h3>
+
                     Colazo Tropical
+
                 </h3>
 
+
                 <p>
-                    A sparkling tropical blend made for bright,
-                    energetic moments.
+
+                    Uma combinação tropical refrescante,
+                    perfeita para momentos cheios de energia.
+
                 </p>
 
+
                 <button class="outline-btn">
-                    View product
+
+                    Ver produto
+
                 </button>
 
+
             </div>
+
 
         </article>
 
 
-        <!-- PRODUCT 2 -->
+
+        <!-- PRODUTO 2 -->
 
         <article class="product-card">
+
 
             <div
                 class="product-image"
@@ -827,34 +1096,53 @@ footer strong{
                 background-image:url(
                 'https://images.unsplash.com/photo-1528825871115-3581a5387919?w=900'
                 )">
+
             </div>
+
 
             <div class="product-body">
 
+
                 <span class="pill">
-                    Zero Sugar
+
+                    Sem açúcar
+
                 </span>
 
+
                 <h3>
+
                     Colazo Zero
+
                 </h3>
 
+
                 <p>
-                    Refreshing sparkle without the sugar.
+
+                    Refrescância e sabor marcante
+                    sem adição de açúcar.
+
                 </p>
 
+
                 <button class="outline-btn">
-                    View product
+
+                    Ver produto
+
                 </button>
 
+
             </div>
+
 
         </article>
 
 
-        <!-- PRODUCT 3 -->
+
+        <!-- PRODUTO 3 -->
 
         <article class="product-card">
+
 
             <div
                 class="product-image"
@@ -862,27 +1150,44 @@ footer strong{
                 background-image:url(
                 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?w=900'
                 )">
+
             </div>
+
 
             <div class="product-body">
 
+
                 <span class="pill">
-                    Limited
+
+                    Edição limitada
+
                 </span>
 
+
                 <h3>
+
                     Passion Pop
+
                 </h3>
 
+
                 <p>
-                    Passion fruit-inspired flavor with a vibrant finish.
+
+                    Sabor inspirado no maracujá,
+                    com um final vibrante e refrescante.
+
                 </p>
 
+
                 <button class="outline-btn">
-                    View product
+
+                    Ver produto
+
                 </button>
 
+
             </div>
+
 
         </article>
 
@@ -894,109 +1199,175 @@ footer strong{
 </section>
 
 
-<!-- EXPERIENCE -->
 
-<section id="experience">
+<!-- =========================
+     EXPERIÊNCIA
+========================= -->
+
+<section id="experiencia">
 
 <div class="wrap">
+
 
     <div class="section-head">
 
         <h2>
-            Experience the brand
+
+            Viva a experiência
+
         </h2>
 
+
         <p>
-            Components designed to demonstrate a polished regional
-            experience for web, mobile and customer-service journeys.
+
+            Componentes criados para oferecer uma experiência
+            regional moderna em web, dispositivos móveis e
+            canais de atendimento ao cliente.
+
         </p>
 
     </div>
 
 
+
     <div class="feature-grid">
 
 
+        <!-- FEATURE 1 -->
+
         <div class="feature">
 
+
             <div class="feature-icon">
+
                 ♫
+
             </div>
+
 
             <div>
 
                 <h3>
-                    Celebration mode
+
+                    Modo celebração
+
                 </h3>
 
+
                 <p>
-                    Visual storytelling designed for high-energy campaigns.
+
+                    Histórias visuais criadas para campanhas
+                    cheias de energia e emoção.
+
                 </p>
 
             </div>
 
+
         </div>
 
 
+
+        <!-- FEATURE 2 -->
+
         <div class="feature">
 
+
             <div class="feature-icon">
+
                 ☀
+
             </div>
+
 
             <div>
 
                 <h3>
-                    Summer ready
+
+                    Clima de verão
+
                 </h3>
 
+
                 <p>
-                    Bright layouts for seasonal and outdoor promotions.
+
+                    Experiências visuais para promoções
+                    sazonais e momentos ao ar livre.
+
                 </p>
 
             </div>
 
+
         </div>
 
 
+
+        <!-- FEATURE 3 -->
+
         <div class="feature">
 
+
             <div class="feature-icon">
+
                 ➜
+
             </div>
+
 
             <div>
 
                 <h3>
-                    Easy journeys
+
+                    Jornada simples
+
                 </h3>
 
+
                 <p>
-                    Simple paths from discovery to action.
+
+                    Caminhos rápidos e intuitivos,
+                    da descoberta até a ação.
+
                 </p>
 
             </div>
+
 
         </div>
 
 
+
+        <!-- FEATURE 4 -->
+
         <div class="feature">
 
+
             <div class="feature-icon">
+
                 ✹
+
             </div>
+
 
             <div>
 
                 <h3>
-                    Campaign components
+
+                    Componentes de campanha
+
                 </h3>
 
+
                 <p>
-                    Reusable banners, cards, offers and CTAs.
+
+                    Banners, cards, ofertas e botões
+                    reutilizáveis para diferentes campanhas.
+
                 </p>
 
             </div>
+
 
         </div>
 
@@ -1008,27 +1379,45 @@ footer strong{
 </section>
 
 
-<!-- CAMPAIGN -->
 
-<section id="campaign">
+<!-- =========================
+     CAMPANHA
+========================= -->
+
+<section id="campanha">
 
 <div class="wrap">
 
+
     <div class="banner">
 
+
         <h2>
-            One brand. A local spark.
+
+            Uma marca.
+            Uma energia brasileira.
+
         </h2>
 
+
         <p>
-            Use the Brazil UAT page to validate colorful campaign
-            modules, product discovery, promotions and customer-service
-            journeys for the Brazilian market.
+
+            Use esta página de UAT do Brasil para validar
+            módulos de campanha, descoberta de produtos,
+            promoções e jornadas de atendimento ao cliente
+            para o mercado brasileiro.
+
         </p>
 
-        <a class="btn primary" href="#products">
-            Discover Colazo
+
+        <a
+            class="btn primary"
+            href="#produtos">
+
+            Descubra a Colazo
+
         </a>
+
 
     </div>
 
@@ -1040,20 +1429,35 @@ footer strong{
 </main>
 
 
-<!-- FOOTER -->
+
+<!-- =========================
+     RODAPÉ
+========================= -->
 
 <footer>
 
-    <div>
-        <strong>Colazo</strong>
-        — Brazil UAT Experience
-    </div>
 
     <div>
-        Demo environment • BR-UAT • © 2026 Colazo
+
+        <strong>
+            Colazo
+        </strong>
+
+        — Experiência UAT Brasil
+
     </div>
+
+
+    <div>
+
+        Ambiente de teste • BR-UAT • © 2026 Colazo
+
+    </div>
+
 
 </footer>
 
+
 </body>
+
 </html>
